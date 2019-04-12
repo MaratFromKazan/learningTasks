@@ -1,4 +1,4 @@
-export function calculateBonus(sales, thresholdValue) {
+export function calculateBonus(sales, thresholdValue, bonusPersent) {
 
     let bonusAmount = 0;
 
@@ -8,7 +8,7 @@ export function calculateBonus(sales, thresholdValue) {
 
         if (difference > 0) {
 
-            const bonus = difference * 0.05;
+            const bonus = difference * (bonusPersent/100);
 
             bonusAmount += bonus;
         }
